@@ -181,8 +181,25 @@ class Main():
             answer = ["트리하우스"]
             print(answer)
             print("1박2일 영화에 나올만한 집. 돈 쫌 많이 필요")
+    def star(self):
+        print("------------------------------")
+        print("혹시 다른사람의 평가가 궁금하다면?")
+        #print("후기 본다:1, 그냥 끝낸다:2")
+        result = int(input("후기 본다:1, 그냥 끝낸다:2 ==>"))
+        if result ==1:
+            print("후기가 없습니다. 본인이 입력하세요")
+            while (True):
+                star = int(input("이 장소에 대한 별점은?(1~5까지):"))
+                if star > 5:
+                    print("1~5중 선택하세요")
+                else:
+                    break
+        elif result ==2:
+            pass
+
 
 
 t= Main()
 t.get_question()
 t.get_travel()
+t.star()
